@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaasthi - Wellness Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" >Swaasthi</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Store.html">Ayurvedic Store</a></li>
+            <li>Yoga</li>
+            <li>Tracker</li>
+            <li>Profile</li>
+        </ul>
+        <a href="#" class="contact-btn">Get Help</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Embrace Your <span style="background: linear-gradient(45deg, #2563eb, #68e2d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Wellness Journey</span></h1>
+            <p>Personalized natural remedies and yoga for your wellbeing</p>
+            <div class="input-container">
+                <input type="text" id="symptom-input" placeholder="Enter your symptoms (e.g., headache, fever)">
+                <div>
+                    <input type="number" id="age-input" placeholder="Your age" min="0" max="150">
+                    <select id="gender-input">
+                        <option value="" disabled selected>Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <select id="severity-input">
+                    <option value="" disabled selected>Select severity</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <button onclick="showRemedies()">
+                    Find Wellness Solutions
+                    <span class="loader" id="loader"></span>
+                </button>
+            </div>
+        </div>
+        <div class="hero-animations">
+            <div class="animation-container">
+                <!-- Drop your first animation JSON file path here -->
+                <lottie-player id="yoga-animation" src="assets/yoga.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                <!-- Drop your second animation JSON file path here -->
+                <!-- <lottie-player id="ayurveda-animation" src="assets/ayurved.json" background="transparent" speed="1" loop autoplay></lottie-player> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Your Holistic Wellness Companion</h2>
+        <p>Swaasthi combines ancient wisdom with modern technology to provide personalized wellness solutions.</p>
+        <div class="features">
+            <div class="feature-card"><h3>AI-Powered Diagnosis</h3><p>Our advanced system analyzes symptoms for natural solutions.</p></div>
+            <div class="feature-card"><h3>Curated Yoga</h3><p>Personalized yoga sequences for your specific needs.</p></div>
+            <div class="feature-card"><h3>Natural Remedies</h3><p>Evidence-based home treatments using common ingredients.</p></div>
+            <div class="feature-card"><h3>Wellness Tracking</h3><p>Monitor progress and build healthy habits.</p></div>
+            <div class="feature-card"><h3>Ayurvedic Store</h3><p>Authentic herbal remedies delivered safely.</p></div>
+            <div class="feature-card"><h3>🧘‍♂️ PosturePerfect: Your Real-Time Yoga Guide</h3><p>🔍 Track, Correct, and Master Every Pose with AI-Powered Feedback</p></div>
+        </div>
+    </section>
+
+    <section class="results" id="results">
+        <div class="section">
+            <h2>Home Remedy</h2>
+            <p id="remedy-text">Enter your symptoms to discover personalized natural remedies.</p>
+        </div>
+        <div class="section" id="yoga-section">
+            <h2>Recommended Yoga</h2>
+            <div id="yoga-poses"></div>
+        </div>
+        <div class="section">
+            <h2>Professional Prescription</h2>
+            <ul id="prep-list" class="prep-list">
+                <li>Personalized health suggestions will appear here</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="explore">
+        <h2>Enhance Your Wellness</h2>
+        <div class="card-container">
+            <div class="card"><h3>Morning Routine</h3><p>Sun Salutations and lemon water to energize.</p></div>
+            <div class="card"><h3>Stress Relief</h3><p>Nostril breathing and bends to calm.</p></div>
+            <div class="card"><h3>Better Sleep</h3><p>Evening yoga for restful sleep.</p></div>
+            <div class="card"><h3>Immunity Boost</h3><p>Asanas and teas to strengthen defenses.</p></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
